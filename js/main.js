@@ -116,25 +116,26 @@
                 return;
         }
 
-        //     var simulatedEvent = document.createEvent("MouseEvent");
-        //     simulatedEvent.initMouseEvent(type, true, true, window, 1, first.screenX, first.screenY, first.clientX, first.clientY, false, false, false, false, 0, null);
-        //
-        //     first.target.dispatchEvent(simulatedEvent);
-        //     e.preventDefault();
-        // }
+        var simulatedEvent = document.createEvent("MouseEvent");
+        simulatedEvent.initMouseEvent(type, true, true, window, 1, first.screenX, first.screenY, first.clientX, first.clientY, false, false, false, false, 0, null);
 
-        var simulatedEvent = new MouseEvent("click", {
-            view: window,
-            bubbles: true,
-            cancelable: true,
-            clientX: first.clientX,
-            clientY: first.clientY,
-            screenX: first.screenX,
-            screenY: first.screenY
-        });
         first.target.dispatchEvent(simulatedEvent);
-        console.log(simulatedEvent);
+        e.preventDefault();
     }
+
+    //     var simulatedEvent = new MouseEvent("click", {
+    //         view: window,
+    //         bubbles: true,
+    //         cancelable: true,
+    //         clientX: first.clientX,
+    //         clientY: first.clientY,
+    //         screenX: first.screenX,
+    //         screenY: first.screenY
+    // });
+    //     first.target.dispatchEvent(simulatedEvent);
+    //     console.log(simulatedEvent)
+    //
+    // }
 
     function init() {
         document.addEventListener("touchstart", touchHandler, true);
@@ -145,21 +146,6 @@
 
     init();
 })();
-
-var targetNode = document.querySelector('.draggable');
-if (targetNode) {
-    //--- Simulate a natural mouse-click sequence.
-    triggerMouseEvent(targetNode, "mouseover");
-    triggerMouseEvent(targetNode, "mousedown");
-    triggerMouseEvent(targetNode, "mouseup");
-    triggerMouseEvent(targetNode, "click");
-} else console.log("*** Target node not found!");
-
-function triggerMouseEvent(node, eventType) {
-    var clickEvent = document.createEvent('MouseEvents');
-    clickEvent.initEvent(eventType, true, true);
-    node.dispatchEvent(clickEvent);
-}
 
 var DragManager = new function () {
 
