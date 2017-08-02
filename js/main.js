@@ -1,101 +1,5 @@
 "use strict";
 
-// document.addEventListener('DOMContentLoaded', function () {
-
-
-// const boxList = document.getElementsByClassName('draggable');
-// boxList.onmousedown = function (e) {
-//     for(let i=0; i < boxList.length; i++) {
-//         let obj = boxList[i];
-//         const touch = event.targetTouches[0];
-//         event.target.style.left = touch.pageX + 'px';
-//         event.target.style.top = touch.pageY + 'px';
-//             event.preventDefault();
-//         }
-// }
-
-// const dragObj = {};
-//
-// document.onmousedown = function (e) {
-//     if (e.wich != 1) {
-//         return;
-//     }
-//     const elem = e.target.closest('.draggable');
-//     if (!elem) {
-//         return;
-//     }
-//     dragObj.elem = elem;
-//     dragObj.downX = e.pageX;
-//     dragObj.downY = e.pageY;
-// };
-//
-// document.onmousemove = function (e) {
-//     if(!dragObj.elem) return;
-//     if(!dragObj.avatar) {
-//         const moveX = e.pageX - dragObj.downX;
-//         const moveY = e.pageY - dragObj.downY;
-//         if ( Math.abs(moveX) < 3 && Math.abs(moveY) < 3 ) {
-//             return;
-//         }
-//         dragObj.avatar = createAvatar(e);
-//         if (!dragObject.avatar) {
-//             dragObject = {};
-//             return;
-//         }
-//         const coords = getCoords(dragObj.avatar);
-//         dragObj.shiftX = dragObj.downX -coords.left;
-//         dragObj.shiftY = dragObj.downY - coords.top;
-//
-//         startDrag(e);
-//     }
-//
-//     dragObj.avatar.style.left = e.pageX - dragObj.shiftX + 'px';
-//     dragObj.avatar.style.top = e.pageY - dragObj.shiftY + 'px';
-//
-//     return false;
-// };
-//
-// function createAvatar(e) {
-//
-//     // запомнить старые свойства, чтобы вернуться к ним при отмене переноса
-//     var avatar = dragObj.elem;
-//     var old = {
-//         parent: avatar.parentNode,
-//         nextSibling: avatar.nextSibling,
-//         position: avatar.position || '',
-//         left: avatar.left || '',
-//         top: avatar.top || '',
-//         zIndex: avatar.zIndex || ''
-//     };
-//
-//     // функция для отмены переноса
-//     avatar.rollback = function() {
-//         old.parent.insertBefore(avatar, old.nextSibling);
-//         avatar.style.position = old.position;
-//         avatar.style.left = old.left;
-//         avatar.style.top = old.top;
-//         avatar.style.zIndex = old.zIndex
-//     };
-//
-//     return avatar;
-// }
-//
-// function startDrag(e) {
-//     var avatar = dragObj.avatar;
-//
-//     document.body.appendChild(avatar);
-//     avatar.style.zIndex = 9999;
-//     avatar.style.position = 'absolute';
-// }
-
-// });
-
-// const bodyDoc = document.querySelector('body');
-// const div = document.createElement('DIV');
-// document.body.appendChild(div);
-// div.innerHTML = '<h1>Hello world</h1>';
-// console.log(bodyDoc);
-
 (function () {
     function touchHandler(e) {
         var touches = e.changedTouches;
@@ -116,26 +20,26 @@
                 return;
         }
 
-        var simulatedEvent = document.createEvent("MouseEvent");
-        simulatedEvent.initMouseEvent(type, true, true, window, 1, first.screenX, first.screenY, first.clientX, first.clientY, false, false, false, false, 0, null);
+        //     var simulatedEvent = document.createEvent("MouseEvent");
+        //     simulatedEvent.initMouseEvent(type, true, true, window, 1, first.screenX, first.screenY, first.clientX, first.clientY, false, false, false, false, 0, null);
+        //
+        //     first.target.dispatchEvent(simulatedEvent);
+        //     e.preventDefault();
+        // }
 
+        // new method
+
+        var simulatedEvent = new MouseEvent(type, {
+            view: window,
+            bubbles: true,
+            cancelable: true,
+            clientX: first.clientX,
+            clientY: first.clientY,
+            screenX: first.screenX,
+            screenY: first.screenY
+        });
         first.target.dispatchEvent(simulatedEvent);
-        e.preventDefault();
     }
-
-    //     var simulatedEvent = new MouseEvent("click", {
-    //         view: window,
-    //         bubbles: true,
-    //         cancelable: true,
-    //         clientX: first.clientX,
-    //         clientY: first.clientY,
-    //         screenX: first.screenX,
-    //         screenY: first.screenY
-    // });
-    //     first.target.dispatchEvent(simulatedEvent);
-    //     console.log(simulatedEvent)
-    //
-    // }
 
     function init() {
         document.addEventListener("touchstart", touchHandler, true);
@@ -147,19 +51,19 @@
     init();
 })();
 
+var box = document.querySelectorAll('.draggable');
+for (var i = 0; i < box.length; i++) {
+    box[i].addEventListener("mousedown", function () {
+        this.style.zIndex = 1000;
+    }, true);
+
+    box[i].addEventListener("mouseleave", function () {
+        this.style.zIndex = 0;
+    }, true);
+}
+
 var DragManager = new function () {
-
-    /**
-     * составной объект для хранения информации о переносе:
-     * {
-    *   elem - элемент, на котором была зажата мышь
-    *   avatar - аватар
-    *   downX/downY - координаты, на которых был mousedown
-    *   shiftX/shiftY - относительный сдвиг курсора от угла элемента
-    * }
-     */
     var dragObject = {};
-
     var self = this;
 
     function onMouseDown(e) {
@@ -168,13 +72,11 @@ var DragManager = new function () {
 
         var elem = e.target.closest('.draggable');
         if (!elem) return;
-
         dragObject.elem = elem;
 
-        // запомним, что элемент нажат на текущих координатах pageX/pageY
+        // dragObject.elem.style.zIndex = 100;
         dragObject.downX = e.pageX;
         dragObject.downY = e.pageY;
-
         return false;
     }
 
@@ -182,33 +84,26 @@ var DragManager = new function () {
         if (!dragObject.elem) return; // элемент не зажат
 
         if (!dragObject.avatar) {
-            // если перенос не начат...
             var moveX = e.pageX - dragObject.downX;
             var moveY = e.pageY - dragObject.downY;
 
-            // если мышь передвинулась в нажатом состоянии недостаточно далеко
             if (Math.abs(moveX) < 3 && Math.abs(moveY) < 3) {
                 return;
             }
 
-            // начинаем перенос
-            dragObject.avatar = createAvatar(e); // создать аватар
+            dragObject.avatar = createAvatar(e);
             if (!dragObject.avatar) {
-                // отмена переноса, нельзя "захватить" за эту часть элемента
+                // cancel drag
                 dragObject = {};
                 return;
             }
 
-            // аватар создан успешно
-            // создать вспомогательные свойства shiftX/shiftY
             var coords = getCoords(dragObject.avatar);
             dragObject.shiftX = dragObject.downX - coords.left;
             dragObject.shiftY = dragObject.downY - coords.top;
-
-            startDrag(e); // отобразить начало переноса
+            startDrag(e);
         }
 
-        // отобразить перенос объекта при каждом движении мыши
         dragObject.avatar.style.left = e.pageX - dragObject.shiftX + 'px';
         dragObject.avatar.style.top = e.pageY - dragObject.shiftY + 'px';
 
@@ -216,13 +111,14 @@ var DragManager = new function () {
     }
 
     function onMouseUp(e) {
+        var elem = e.target.closest('.draggable');
+        if (!elem) return;
+        dragObject.elem = elem;
+        // dragObject.elem.style.zIndex = 100;
+
         if (dragObject.avatar) {
-            // если перенос идет
             finishDrag(e);
         }
-
-        // перенос либо не начинался, либо завершился
-        // в любом случае очистим "состояние переноса" dragObject
         dragObject = {};
     }
 
@@ -237,51 +133,28 @@ var DragManager = new function () {
     }
 
     function createAvatar(e) {
-
-        // запомнить старые свойства, чтобы вернуться к ним при отмене переноса
         var avatar = dragObject.elem;
-        // var old = {
-        //     parent: avatar.parentNode,
-        //     nextSibling: avatar.nextSibling,
-        //     position: avatar.position || '',
-        //     left: avatar.left || '',
-        //     top: avatar.top || '',
-        //     zIndex: avatar.zIndex || ''
-        // };
-        //
-        // // функция для отмены переноса
-        // avatar.rollback = function() {
-        //     old.parent.insertBefore(avatar, old.nextSibling);
-        //     avatar.style.position = old.position;
-        //     avatar.style.left = old.left;
-        //     avatar.style.top = old.top;
-        //     avatar.style.zIndex = old.zIndex
-        // };
-
         return avatar;
     }
 
     function startDrag(e) {
         var avatar = dragObject.avatar;
-
-        // инициировать начало переноса
         document.body.appendChild(avatar);
-        avatar.style.zIndex = 9999;
+        avatar.style.zIndex = 1000;
         avatar.style.position = 'absolute';
     }
 
     function findDroppable(event) {
-        // спрячем переносимый элемент
-        dragObject.avatar.hidden = true;
+        // for obj
+        // dragObject.avatar.hidden = true;
 
         // получить самый вложенный элемент под курсором мыши
         var elem = document.elementFromPoint(event.clientX, event.clientY);
 
-        // показать переносимый элемент обратно
-        dragObject.avatar.hidden = false;
+        // display obj
+        // dragObject.avatar.hidden = false;
 
         if (elem == null) {
-            // такое возможно, если курсор мыши "вылетел" за границу окна
             return null;
         }
 
@@ -305,4 +178,11 @@ function getCoords(elem) {
         left: box.left + pageXOffset
     };
 }
+
+// document.getElementById('drag1').addEventListener('dragstart', function (e) {
+//     e.preventDefault();
+//     const img = document.createElement('IMG');
+//     img.src = 'img/6.png';
+// e.dataTransfer.setDragImage(img, 0, 0);
+// }, false);
 //# sourceMappingURL=main.js.map
