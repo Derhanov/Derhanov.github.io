@@ -1,61 +1,698 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Javascript</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js" defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SPD-University</title>
+    <meta name="keywords" content="SPD-University">
+    <meta name="author" content="SPD-Ukraine">
+    <meta name="description" content="SPD-University - це проект, що допомагає талановитій молоді, яка хоче пов'язати своє життя з ІТ,
+                    максимально нівелювати той самий розрив між теоретичними знаннями та досвідом, необхідним для працевлаштування">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
+
+    <!--Social metas-->
+    <meta property="og:title" content="SPD-University">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="SPD-University - це проект, що допомагає талановитій молоді, яка хоче пов'язати своє життя з ІТ,
+                    максимально нівелювати той самий розрив між теоретичними знаннями та досвідом, необхідним для працевлаштування">
+    <meta property="og:url" content="http://spd-university.com/">
+    <meta property="og:image" content="http://spd-university.com/images/social.jpg">
+    <meta name="twitter:url" content="http://spd-university.com">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico/favicon-16x16.png">
+    <link rel="manifest" href="favicon.ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-<!--<section class="drag-and-drops">-->
+    <!--<div class="site-canvas">-->
+        <!--<nav class="primary-nav">-->
+            <!--<button class="nav-btn close-btn remove-btn" id="close-nav">-->
+                <!--<i class="fa fa-times"></i>-->
+            <!--</button>-->
+            <!--&lt;!&ndash;<button class="nav-btn close-btn remove-btn" id="close-nav2">&ndash;&gt;-->
+                <!--&lt;!&ndash;<i class="fa fa-times"></i>&ndash;&gt;-->
+            <!--&lt;!&ndash;</button>&ndash;&gt;-->
+            <!--<ul class="main-menu">-->
+                <!--<li class="main-menu__item"><a class="main-menu__item_link" href="#home">University Home</a></li>-->
+                <!--<li class="main-menu__item"><a class="main-menu__item_link" href="#about">About</a></li>-->
+                <!--<li class="main-menu__item"><a class="main-menu__item_link" href="#courses">Courses</a></li>-->
+                <!--<li class="main-menu__item"><a class="main-menu__item_link" href="#team">Team</a></li>-->
+                <!--<li class="main-menu__item"><a class="main-menu__item_link" href="#faq">FAQ</a></li>-->
+                <!--<li class="main-menu__item"><a class="main-menu__item_link" href="#partners">Partners</a></li>-->
+            <!--</ul>-->
+        <!--</nav>-->
+        <!--<header class="header">-->
+            <!--<div class="container l-flex-between">-->
+                <!--<figure class="primary-nav__logo">-->
+                    <!--<img alt="Brand" src="images/logo-header.png">-->
+                <!--</figure>-->
+                <!--<button class="nav-btn open-btn" id="open-nav">-->
+                    <!--<i class="fa fa-bars"></i>-->
+                <!--</button>-->
+                <!--<button class="nav-btn change-btn" id="changeDirect">-->
+                    <!--Change direction canvas menu-->
+                <!--</button>-->
+            <!--</div>-->
+        <!--</header>-->
+    <header class="header">
+        <div class="container">
+            <div class="mobile-btn-nav">
+                <button class="nav-btn main-nav-toggle" id="menuToggle">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <form id="module" class="module">
+                    <ul class="check-list">
+                        <li class="check-list_item">
+                            <input type="radio" name="direction" id="left" value="left">left
+                        </li>
+                        <li class="check-list_item">
+                            <input type="radio" name="direction" id="right" value="right">right
+                        </li>
+                        <li class="check-list_item">
+                            <input type="radio" name="direction" id="top" value="top">top
+                        </li>
+                        <li class="check-list_item">
+                            <input type="radio" name="direction" id="bottom" value="bottom">bottom
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <nav class="main-nav offcanvas show-left" id="mainNav" data-direction="left">
+                <button class="nav-btn close-btn remove-btn" id="close-nav">
+                    <i class="fa fa-times"></i>
+                </button>
+                <figure class="main-nav__logo">
+                    <img alt="Brand" src="images/logo-header.png">
+                </figure>
+                <ul class="main-menu">
+                    <li class="main-menu__item nav-item"><a href="#home">University Home</a></li>
+                    <li class="main-menu__item nav-item"><a href="#about">About</a></li>
+                    <li class="main-menu__item nav-item"><a href="#courses">Courses</a></li>
+                    <li class="main-menu__item nav-item"><a href="#team">Team</a></li>
+                    <li class="main-menu__item nav-item"><a href="#faq">FAQ</a></li>
+                    <li class="main-menu__item nav-item"><a href="#partners">Partners</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<section class="home">
+    <div class="container">
+        <div class="home-intro l-flex-center">
+            <figure class="spd-logo">
+                <img class="img-responsive" src="images/spdu_logo.png" alt="logo">
+            </figure>
+            <h1 class="section-header title-home">Spd-University — <span class="title-home__child">IT-освіта Черкас</span></h1>
+            <h2 class="registration uppercase main-block_primary-header">Реєстрацію закрито!</h2>
+            <a class="registration button-default uppercase" target="_blank"
+               href="https://docs.google.com/forms/d/e/1FAIpQLSeI6fn7r2nYdVdryNxnX8AwH57XAexjrfrCFu-vWPMGSiCxzw/viewform">Зареєструватися</a>
+            <p class="home-description">SPD-University - це проект для тих, хто хоче прокачати
+                свої
+                знання у
+                сфері ІТ. А як відомо, найкращий
+                спосіб поглибити свої теоретичні знання - підкріпити їх справжнім живим досвідом.
+            </p>
+        </div>
+    </div>
+</section>
+<section class="about-us">
+    <div class="container">
+        <h3 class="sup-header">Spd-University - про нас</h3>
+        <h2 class="section-header header-primary primary-color">Що собою являє SPD University?</h2>
+        <article class="l-flex-center">
+            <div class="description-about">
+                <p>SPD-University - це проект, що допомагає талановитій молоді, яка хоче пов'язати своє життя з ІТ,
+                    максимально нівелювати той самий розрив між теоретичними знаннями та досвідом, необхідним для
+                    працевлаштування.</p>
+                <p>Програми SPD-University розроблені спеціалістами, що працюють в ІТ, а відтак найбільше відповідають
+                    очікуванням роботодавців. Розроблюючи програми навчання, провідні фахівці орієнтуються на те, що
+                    частина слухачів курсів буде працювати в їхній команді, а отже максимально адаптують їх під робоче
+                    середовище.</p>
+                <p>Усі програми мають "університетський" підхід. Це означає, що крім основних дисциплін зі спеціалізації
+                    у слухачів також будуть лекції та практичні заняття із суміжних дисциплін. Одним з найважливіших
+                    елементів навчання є наскрізний проект, який виконується в повноцінних командах, що складається з
+                    Back-End і Front-End розробників, а також QA. Менторами проектів виступають провідні спеціалісти з
+                    компанії SPD-Ukraine.</p>
+                <p>
+                    Команда SPD складається з найдосвідченіших спеціалістів своєї області, що готові ділитися своїм
+                    практичним досвідом. Курси безкоштовні, проте вимагають від абітурієнтів теоретичної бази.</p>
+            </div>
+        </article>
+        <div class="l-flex-around">
+            <figure class="spd-logo">
+                <img class="img-responsive" src="images/about_logo.png" alt="logo">
+            </figure>
+            <div class="wrapper-about-courses">
+                <h4 class="about-title primary-color">На данний момент у нас відкриті такі курси:</h4>
+                <ul class="about-list">
+                    <li class="about-list__item">
+                        <!--<hr>-->
+                        <img src="images/java.png" class="about-block_courses-icon" alt="courses logo">
+                        <a class="about-list__item_link" href="#">Java for Web</a></li>
+                    <li class="about-list__item">
+                        <!--<hr>-->
+                        <img src="images/html5.png" class="about-block_courses-icon" alt="courses logo">
+                        <a class="about-list__item_link" href="#">Front-End</a></li>
+                    <li class="about-list__item">
+                        <!--<hr>-->
+                        <img src="images/qa.png" class="about-block_courses-icon" alt="courses logo">
+                        <a class="about-list__item_link" href="#">Quality Assurance</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="choice-course">
+    <div class="container">
+        <h2 class="section-header header-primary">Курси SPD-University</h2>
+        <ul class="courses-list l-flex-center">
+            <li class="courses-list__item">
+                <h3>Java <span>for</span> Web</h3>
+                <figure class="courses-logo">
+                    <img src="images/java.png" alt="courses-logo">
+                </figure>
+                <p class="item-description">
+                    Курс розрахований на тих, хто вже має теоретичну базу та зробив свої перші кроки у вивченні цієї
+                    ентерпрайз технології
+                </p>
+                <div class="courses-list__item__view">
+                    <button type="button" class="btn btn-view" data-toggle="modal"
+                            data-target="#java">Дізнатися більше
+                    </button>
+                </div>
+            </li>
+            <li class="courses-list__item">
+                <h3>Front-End</h3>
+                <figure class="courses-logo">
+                    <img src="images/html5.png" alt="courses-logo">
+                </figure>
+                <p class="item-description">Цей курс призначений для тих, хто хоче навчитися створювати сайти та
+                    динамічні
+                    веб-додатки
+                </p>
+                <div class="courses-list__item__view">
+                    <button type="button" class="btn btn-view" data-toggle="modal"
+                            data-target="#java">Дізнатися більше
+                    </button>
+                </div>
+            </li>
+            <li class="courses-list__item">
+                <h3>QA</h3>
+                <figure class="courses-logo">
+                    <img src="images/qa.png" alt="courses-logo">
+                </figure>
+                <p class="item-description">Курс призначений для слухачів без професійного досвіду в сфері
+                    тестування програмного забезпечення</p>
+                <div class="courses-list__item__view">
+                    <button type="button" class="btn btn-view" data-toggle="modal"
+                            data-target="#java">Дізнатися більше
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="courses-how">
+    <div class="container">
+        <h2 class="section-header header-primary primary-color">Як потрапити на курси?</h2>
+        <p class="sub-header">Що робити, щоб потрапити на курси в SPD-University?</p>
+        <div class="l-flex-center">
+            <ul class="steps-list">
+                <li class="steps-list__item"><span>Зареєструватися на нашому сайті або за посиланням у FB</span></li>
+                <li class="steps-list__item">
+                    <span>Пройти тестування з напрямку, який ви обрали під час реєстрації</span></li>
+                <li class="steps-list__item"><span>У разі успішного складання тесту - пройти співбесіду</span></li>
+            </ul>
+        </div>
+        <!--<img src="images/Polygon1.png" class="courses-steps-img-right" alt="Polygon">-->
+        <h3 class="header-middle primary-color">Деталі про вступ до SPD-University</h3>
+        <div class="l-flex-center">
+            <ul class="details-list">
+                <li class="details-list__item">Для того, щоб потрапити до SPD-University потрібно:</li>
+                <li class="details-list__item">Крок перший - зареєструватися на курси на офіційному сайті SPD-University
+                    або на сторінці у
+                    Facebook. Вам обов‘язково прийде підтвердження про успішну реєстрацію на пошту.
+                </li>
+                <li class="details-list__item">Другий крок - складання авто-тесту з обраного вами напряму (англійською
+                    мовою). Найкращих за
+                    результатами кандидатів ми запросимо на співбесіду.
+                </li>
+                <li class="details-list__item">Важливо! Для напрямку QA тестів буде 2. Один профільний, другий - на
+                    визначення рівня англійської
+                    мови.
+                </li>
+                <li class="details-list__item">Третій і останній крок - співбесіда. У вас буде можливість
+                    продемонструвати технічні знання та
+                    комунікативні навички.
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="requirements">
+    <div class="container">
+        <h2 class="section-header header-primary">Вимоги до кандидатів</h2>
+        <ul class="requirements-list l-flex-between">
+            <li class="requirements-list__item">
+                <h3>Java <span>for</span> Web</h3>
+                <ul class="courses-require">
+                    <li class="courses-require__list">Java 8 Core: класи/інтерфейси, Generic, Collections API, IO,
+                        Exceptions, аннотації.
+                    </li>
+                    <li class="courses-require__list">Принципи ООП.</li>
+                    <li class="courses-require__list">Знання алгоритмів і структур данних.</li>
+                    <li class="courses-require__list">Основи SQL.</li>
+                    <li class="courses-require__list">Основи HTML/CSS/JS.</li>
+                    <li class="courses-require__list">Основи Web: HTTP запити, Cookies, Session.</li>
+                    <li class="courses-require__list">Рівень англійської Intermediate або вище.</li>
+                </ul>
+            </li>
+            <li class="requirements-list__item">
+                <h3>Front-end</h3>
+                <ul class="courses-require">
+                    <li class="courses-require__list">Знання основ HTML/CSS.</li>
+                    <li class="courses-require__list">Вміння користуватися одним із графічних редакторів.</li>
+                    <li class="courses-require__list">Досвід верстки від 3 місяців.</li>
+                    <li class="courses-require__list">Досвід Responsive або Adaptive верстки</li>
+                    <li class="courses-require__list">Розуміння основ програмування, структур данних та алгоритмів.</li>
+                    <li class="courses-require__list">Базові знання Javascript.</li>
+                    <li class="courses-require__list">Рівень англійської Intermediate або вище.</li>
+                </ul>
+            </li>
+            <li class="requirements-list__item">
+                <h3>QA</h3>
+                <ul class="courses-require">
+                    <li class="courses-require__list">Рівень англійської Intermediate або вище.</li>
+                    <li class="courses-require__list">Базова комп'ютерна грамотність.</li>
+                </ul>
+            </li>
+            <!--<a class="registration button-default uppercase" target="_blank"-->
+            <!--href="https://docs.google.com/forms/d/e/1FAIpQLSeI6fn7r2nYdVdryNxnX8AwH57XAexjrfrCFu-vWPMGSiCxzw/viewform">Зареєструватися</a>-->
+        </ul>
+    </div>
+</section>
+<section class="team">
     <!--<div class="container">-->
-        <!--<div class="drag-zone">-->
+    <h4 class="sup-header">Команда</h4>
+    <h2 class="section-header header-primary primary-color">Команда SPD-University</h2>
+    <ul class="team-list">
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/oleg_novitskiy.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Олег Новіцький</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/leonid_bayda.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Леонід Байда</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/maksym_melnyk.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Максим Мельник</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/allteam.png" class="team-stuff-img img-responsive" alt="all team">
+            </figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Вся команда</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/alina_ternovaia.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Олег Новіцький</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/Anakin.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Леонід Байда</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/anastasia_sergienko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Максим Мельник</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/anton_borisov.jpg" class="team-stuff-img img-responsive" alt="all team">
+            </figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Вся команда</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/artem_tkachenko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Олег Новіцький</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/Borovyk.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Леонід Байда</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/daniel_synelnikov.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Максим Мельник</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/dmitry_nesterenko.jpg" class="team-stuff-img img-responsive" alt="all team">
+            </figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Вся команда</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/elena_kiva.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Олег Новіцький</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/elena_yaroslavskaya.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Леонід Байда</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/igor_shevchenko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Максим Мельник</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/ihor_dolych.jpg" class="team-stuff-img img-responsive" alt="all team">
+            </figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Вся команда</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/illia_moskaliuk.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Олег Новіцький</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/kate_nahorna.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Леонід Байда</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/Khakimulin.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Максим Мельник</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/konstantin_kikot.jpg" class="team-stuff-img img-responsive" alt="all team">
+            </figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Вся команда</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/Kosholap.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Олег Новіцький</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/Lazorenko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Леонід Байда</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/maksym_chepur.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Максим Мельник</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/miguel_suddya.jpg" class="team-stuff-img img-responsive" alt="all team">
+            </figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Вся команда</h3>
+            </div>
+        </li>
+         <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/Nikitenko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Олег Новіцький</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/sergey_bzenko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Леонід Байда</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/serhii_borovskyi.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Максим Мельник</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/Simonov.jpg" class="team-stuff-img img-responsive" alt="all team">
+            </figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Вся команда</h3>
+            </div>
+        </li>
+         <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/ulia_gotovtceva.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Олег Новіцький</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/Vasylchenko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Леонід Байда</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/viktoriya_karakat.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Максим Мельник</h3>
+            </div>
+        </li>
+        <li class="team-list__item">
+            <figure class="team-img"><img src="images/team/vladislav_musienko.jpg" class="team-stuff-img img-responsive" alt="all team">
+            </figure>
+            <div class="team-shadow-overlay">
+                <h3 class="member-team">Вся команда</h3>
+            </div>
+        </li>
 
-        <!--</div>-->
+    </ul>
     <!--</div>-->
-<!--</section>-->
-<div class="draggable" id="drag1"></div>
-<div class="draggable" id="drag2"></div>
-<div class="draggable" id="drag3"></div>
+</section>
+<section class="faq">
+    <div class="container">
+        <h2 class="section-header header-primary primary-color">FAQ</h2>
+        <p class="sub-header primary-color">У вас виникли питання? Ми з радістю вам допоможемо.</p>
+        <ul class="questions-list">
+            <li class="questions-list__item"><a data-toggle="collapse" data-target="#faq-lessons">Де проходитимуть
+                заняття
+                на курсах
+                SPD-University?</a>
+                <div id="faq-lessons" class="collapse faq-answers">
+                    <p>Заняття проходитимуть в нашому офісі за адресою
+                        вулиця Кривалівська (Паризької комуни) 7, 5-й поверх
+                    </p>
+                </div>
+            </li>
+            <li class="questions-list__item"><a data-toggle="collapse" data-target="#faq-durability">Яка тривалість
+                курсу?</a>
+                <div id="faq-durability" class="collapse faq-answers">
 
-<!--<canvas id="canvas">-->
+                    <p>Загальна тривалість курсу 7 місяців, з яких 6 місяців - заняття з
+                        викладачами,
+                        лекції та практичні заняття, та ще 1 місяць на розробку наскрізного проекту в командах.
+                    </p>
+                </div>
+            </li>
+            <li class="questions-list__item"><a data-toggle="collapse" data-target="#faq-learning">Чи можна суміщати
+                роботу/навчання з
+                навчанням
+                на курсах в SPD-University?</a>
+                <div id="faq-learning" class="collapse faq-answers">
+                    <p>
+                        Звичайно. Ми чудово розуміємо, що слухачі наших курсів можуть навчатися
+                        у ВУЗі або ж працювати, тому для зручності заняття в SPD-University
+                        розпочинаються о 18:00.
 
-<!--</canvas>-->
+                    </p></div>
+            </li>
+            <li class="questions-list__item"><a data-toggle="collapse" data-target="#faq-payment">Скільки коштує
+                навчання
+                в
+                SPD-University?</a>
+                <div id="faq-payment" class="collapse faq-answers">
+                    <p>
+                        Навчання на курсах в SPD-University безкоштовне!
+                    </p>
+                </div>
+            </li>
+            <li class="questions-list__item"><a data-toggle="collapse" data-target="#faq-java">Що почитати щоб потрапити
+                на курс Java for
+                Web?</a>
+                <div id="faq-java" class="collapse faq-answers">
+                    <ol class="info-list">
+                        <li class="info-list__item">Sierra K., Bates B. Head First Java
+                        </li>
+                        <li class="info-list__item">Курс "Основи програмування на Java"
+                        </li>
+                        <li class="info-list__item">Курс "Intro to SQL: Querying and managing data"
+                        </li>
+                        <li class="info-list__item">Шилдт Г. Полный справочник по Java
+                        </li>
+                        <li class="info-list__item">Эккель Б. Философия Java</li>
+                        <li class="info-list__item">Хорстманн К., Корнелл Г. Java. Библиотека профессионала, том 1</li>
+                    </ol>
+                </div>
+            </li>
+            <li class="questions-list__item"><a data-toggle="collapse" data-target="#faq-frontend">Що почитати щоб
+                потрапити на курс
+                Front-end?</a>
+                <div id="faq-frontend" class="collapse faq-answers">
+                    <ol class="info-list">
+                        <li class="info-list__item">Стефанов C. JavaScript. Шаблоны
+                            http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752/
+                        </li>
+                        <li class="info-list__item">Маккоу А. Веб-приложения на JavaScript
+                            http://www.amazon.com/JavaScript-Web-Applications-Alex-MacCaw/dp/144930351X
+                        </li>
+                        <li class="info-list__item">Флэнаган Д. JavaScript. Подробное руководство
+                            http://www.amazon.com/JavaScript-Definitive-Guide-Activate-Guides/dp/0596805527
+                        </li>
+                        <li class="info-list__item">Крокфорд Д. JavaScript. Сильные стороны
+                            http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742/
+                        </li>
+                        <li class="info-list__item">MDN: JavaScript Guide:
+                            https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+                        </li>
+                    </ol>
+                </div>
+            </li>
+            <li class="questions-list__item"><a data-toggle="collapse" data-target="#faq-qa">Що почитати щоб потрапити
+                на
+                курс QA?</a>
+                <div id="faq-qa" class="collapse faq-answers">
+                    <ol class="info-list">
+                        <li class="info-list__item">Dorothy Graham: Foundations of Software Testing</li>
+                    </ol>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--<img src="images/Polygon.png" class="faq-img-polygon-left" alt="Polygon">-->
+    <!--<img src="images/Polygon1.png" class="faq-img-polygon-right" alt="Polygon">-->
+</section>
+<section class="partners">
+    <!--<img src="images/Polygon1.png" class="courses-steps-img-right img-responsive" alt="Polygon">-->
+    <div class="container">
+        <h2 class="section-header header-primary primary-color">Наші партнери</h2>
+        <p class="sub-header">Ми вдячні нашим партнерам за підтримку <br>проекту SPD-University</p>
+        <figure class="partner-logo">
+            <a target="_blank" href="https://www.jetbrains.com" title="JetBrains official site">
+                <img src="images/jetbrains-variant-4.png" width="300" alt="JetBrains logo">
+            </a>
+        </figure>
+    </div>
+    <!--<img src="images/Polygon.png" class="courses-steps-img-left img-responsive" alt="Polygon">-->
+</section>
+<footer>
+    <div class="container">
+        <div class="l-flex-between">
+            <div class="footer-widget">
+                <a href="/" class="logo img-responsive"><img src="images/logo-footer.png" alt="logo"
+                                                             title="spd-university"></a>
+                <p class="promo">СПД-університет - найкращий спосіб прокачати свої знання у сфері ІТ</p>
+            </div>
+            <!--<div class="footer-widget">-->
+            <!--<a class="registration button-default uppercase" target="_blank"-->
+            <!--href="https://docs.google.com/forms/d/e/1FAIpQLSeI6fn7r2nYdVdryNxnX8AwH57XAexjrfrCFu-vWPMGSiCxzw/viewform">Зареєструватися</a>-->
+            <!--</div>-->
+            <div class="footer-widget">
+                <h4 class="footer-header">Контакти</h4>
+                <ul class="contact-list">
+                    <li class="contact-list--item"><a href="tel:0633924833">(063) 392 48 33</a></li>
+                    <li class="contact-list--item"><a href="mailto:info@spd-university.com">info@spd-university.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="social-block l-flex-center footer__social-block">
+        <div class="container">
+            <div class="l-flex-between">
+                <ul class="social-list l-flex-center">
+                    <li class="social-list__item"><a target="_blank" href="https://www.facebook.com/SPD.University/"><i
+                            class="fa fa-facebook"></i></a></li>
+                    <li class="social-list__item"><a target="_blank"
+                                                     href="https://www.linkedin.com/company/spd-ukraine"><i
+                            class="fa fa-linkedin"></i></a></li>
+                    <li class="social-list__item"><a target="_blank" href="https://www.instagram.com/spduniversity/"><i
+                            class="fa fa-instagram"></i></a></li>
+                </ul>
+                <p class="copyright">&copy; <a href="https://spd-ukraine.com/">SPD-Ukraine.com</a> 2017.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<button onclick="topFunction()" class="scroll-btn" id="scrollBtn"><i class="fa fa-angle-up"></i></button>
+    <!--</div>-->
+
+<!--<script src="js/vendor/jquery.min.js"></script>-->
+<!--<script src="js/vendor/bootstrap.min.js"></script>-->
+<script src="js/script.js"></script>
+<script defer>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-82375944-1', 'auto');
+    ga('send', 'pageview');
+</script>
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>
