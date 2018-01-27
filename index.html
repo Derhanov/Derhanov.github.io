@@ -34,10 +34,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico/favicon-16x16.png">
     <link rel="manifest" href="favicon.ico/manifest.json">
 
-    <!--<link rel = "dns-prefetch" href = "https://derhanov.github.io/" >-->
-    <link rel = "preconnect" href = "https://derhanov.github.io/" >
-    <link rel = "preconnect" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel = "preconnect" href = "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <!--<link rel="dns-prefetch" href="https://fonts.google.com/">-->
+    <!--<link rel="dns-prefetch" href="https://www.google.com/analytics/">-->
+    <!--<link rel="dns-prefetch" href="https://www.bootstrapcdn.com/">-->
+
+    <!--<link rel = "preconnect" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <!--<link rel = "preconnect" href = "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" as="font" crossorigin>-->
+
+    <!--<link rel="preload" href="styles/style.css" as="style">-->
+    <!--<link rel="preload" href="js/script.js" as="script">-->
 
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
@@ -48,36 +53,6 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-<!--<div class="site-canvas">-->
-<!--<nav class="primary-nav">-->
-<!--<button class="nav-btn close-btn remove-btn" id="close-nav">-->
-<!--<i class="fa fa-times"></i>-->
-<!--</button>-->
-<!--&lt;!&ndash;<button class="nav-btn close-btn remove-btn" id="close-nav2">&ndash;&gt;-->
-<!--&lt;!&ndash;<i class="fa fa-times"></i>&ndash;&gt;-->
-<!--&lt;!&ndash;</button>&ndash;&gt;-->
-<!--<ul class="main-menu">-->
-<!--<li class="main-menu__item"><a class="main-menu__item_link" href="#home">University Home</a></li>-->
-<!--<li class="main-menu__item"><a class="main-menu__item_link" href="#about">About</a></li>-->
-<!--<li class="main-menu__item"><a class="main-menu__item_link" href="#courses">Courses</a></li>-->
-<!--<li class="main-menu__item"><a class="main-menu__item_link" href="#team">Team</a></li>-->
-<!--<li class="main-menu__item"><a class="main-menu__item_link" href="#faq">FAQ</a></li>-->
-<!--<li class="main-menu__item"><a class="main-menu__item_link" href="#partners">Partners</a></li>-->
-<!--</ul>-->
-<!--</nav>-->
-<!--<header class="header">-->
-<!--<div class="container l-flex-between">-->
-<!--<figure class="primary-nav__logo">-->
-<!--<img alt="Brand" src="images/logo-header.png">-->
-<!--</figure>-->
-<!--<button class="nav-btn open-btn" id="open-nav">-->
-<!--<i class="fa fa-bars"></i>-->
-<!--</button>-->
-<!--<button class="nav-btn change-btn" id="changeDirect">-->
-<!--Change direction canvas menu-->
-<!--</button>-->
-<!--</div>-->
-<!--</header>-->
 <header class="header">
     <div class="container">
         <div class="mobile-btn-nav">
@@ -700,26 +675,5 @@
     ga('create', 'UA-82375944-1', 'auto');
     ga('send', 'pageview');
 </script>
-
-<script defer>
-    var startTime, endTime, fileSize;
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            endTime = (new Date()).getTime();
-            fileSize = xhr.responseText.length;
-            var speed = (fileSize * 8)/ ((endTime - startTime)/1000) / 1024;
-            console.log(speed + " Kbps\n");
-        }
-    }
-    startTime = (new Date()).getTime();
-
-    xhr.open("GET", "https://derhanov.github.io/images/team/anastasia_sergienko.jpg", true);
-    xhr.send();
-</script>
-
-<!--<script defer>-->
-  <!---->
-<!--</script>-->
 </body>
 </html>
