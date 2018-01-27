@@ -33,6 +33,12 @@
     <link rel="icon" type="image/png" sizes="96x96" href="favicon.ico/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico/favicon-16x16.png">
     <link rel="manifest" href="favicon.ico/manifest.json">
+
+    <!--<link rel = "dns-prefetch" href = "https://derhanov.github.io/" >-->
+    <link rel = "preconnect" href = "https://derhanov.github.io/" >
+    <link rel = "preconnect" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel = "preconnect" href = "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -42,82 +48,82 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <!--<div class="site-canvas">-->
-        <!--<nav class="primary-nav">-->
-            <!--<button class="nav-btn close-btn remove-btn" id="close-nav">-->
-                <!--<i class="fa fa-times"></i>-->
-            <!--</button>-->
-            <!--&lt;!&ndash;<button class="nav-btn close-btn remove-btn" id="close-nav2">&ndash;&gt;-->
-                <!--&lt;!&ndash;<i class="fa fa-times"></i>&ndash;&gt;-->
-            <!--&lt;!&ndash;</button>&ndash;&gt;-->
-            <!--<ul class="main-menu">-->
-                <!--<li class="main-menu__item"><a class="main-menu__item_link" href="#home">University Home</a></li>-->
-                <!--<li class="main-menu__item"><a class="main-menu__item_link" href="#about">About</a></li>-->
-                <!--<li class="main-menu__item"><a class="main-menu__item_link" href="#courses">Courses</a></li>-->
-                <!--<li class="main-menu__item"><a class="main-menu__item_link" href="#team">Team</a></li>-->
-                <!--<li class="main-menu__item"><a class="main-menu__item_link" href="#faq">FAQ</a></li>-->
-                <!--<li class="main-menu__item"><a class="main-menu__item_link" href="#partners">Partners</a></li>-->
-            <!--</ul>-->
-        <!--</nav>-->
-        <!--<header class="header">-->
-            <!--<div class="container l-flex-between">-->
-                <!--<figure class="primary-nav__logo">-->
-                    <!--<img alt="Brand" src="images/logo-header.png">-->
-                <!--</figure>-->
-                <!--<button class="nav-btn open-btn" id="open-nav">-->
-                    <!--<i class="fa fa-bars"></i>-->
-                <!--</button>-->
-                <!--<button class="nav-btn change-btn" id="changeDirect">-->
-                    <!--Change direction canvas menu-->
-                <!--</button>-->
-            <!--</div>-->
-        <!--</header>-->
-    <header class="header">
-        <div class="container">
-            <div class="mobile-btn-nav">
-                <button class="nav-btn main-nav-toggle" id="menuToggle">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <form id="module" class="module">
-                    <ul class="check-list">
-                        <li class="check-list_item">
-                            <input type="radio" name="direction" id="left" value="left">left
-                        </li>
-                        <li class="check-list_item">
-                            <input type="radio" name="direction" id="right" value="right">right
-                        </li>
-                        <li class="check-list_item">
-                            <input type="radio" name="direction" id="top" value="top">top
-                        </li>
-                        <li class="check-list_item">
-                            <input type="radio" name="direction" id="bottom" value="bottom">bottom
-                        </li>
-                    </ul>
-                </form>
-            </div>
-            <nav class="main-nav offcanvas show-left" id="mainNav" data-direction="left">
-                <button class="nav-btn close-btn remove-btn" id="close-nav">
-                    <i class="fa fa-times"></i>
-                </button>
-                <figure class="main-nav__logo">
-                    <img alt="Brand" src="images/logo-header.png">
-                </figure>
-                <ul class="main-menu">
-                    <li class="main-menu__item nav-item"><a href="#home">University Home</a></li>
-                    <li class="main-menu__item nav-item"><a href="#about">About</a></li>
-                    <li class="main-menu__item nav-item"><a href="#courses">Courses</a></li>
-                    <li class="main-menu__item nav-item"><a href="#team">Team</a></li>
-                    <li class="main-menu__item nav-item"><a href="#faq">FAQ</a></li>
-                    <li class="main-menu__item nav-item"><a href="#partners">Partners</a></li>
+<!--<div class="site-canvas">-->
+<!--<nav class="primary-nav">-->
+<!--<button class="nav-btn close-btn remove-btn" id="close-nav">-->
+<!--<i class="fa fa-times"></i>-->
+<!--</button>-->
+<!--&lt;!&ndash;<button class="nav-btn close-btn remove-btn" id="close-nav2">&ndash;&gt;-->
+<!--&lt;!&ndash;<i class="fa fa-times"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;</button>&ndash;&gt;-->
+<!--<ul class="main-menu">-->
+<!--<li class="main-menu__item"><a class="main-menu__item_link" href="#home">University Home</a></li>-->
+<!--<li class="main-menu__item"><a class="main-menu__item_link" href="#about">About</a></li>-->
+<!--<li class="main-menu__item"><a class="main-menu__item_link" href="#courses">Courses</a></li>-->
+<!--<li class="main-menu__item"><a class="main-menu__item_link" href="#team">Team</a></li>-->
+<!--<li class="main-menu__item"><a class="main-menu__item_link" href="#faq">FAQ</a></li>-->
+<!--<li class="main-menu__item"><a class="main-menu__item_link" href="#partners">Partners</a></li>-->
+<!--</ul>-->
+<!--</nav>-->
+<!--<header class="header">-->
+<!--<div class="container l-flex-between">-->
+<!--<figure class="primary-nav__logo">-->
+<!--<img alt="Brand" src="images/logo-header.png">-->
+<!--</figure>-->
+<!--<button class="nav-btn open-btn" id="open-nav">-->
+<!--<i class="fa fa-bars"></i>-->
+<!--</button>-->
+<!--<button class="nav-btn change-btn" id="changeDirect">-->
+<!--Change direction canvas menu-->
+<!--</button>-->
+<!--</div>-->
+<!--</header>-->
+<header class="header">
+    <div class="container">
+        <div class="mobile-btn-nav">
+            <button class="nav-btn main-nav-toggle" id="menuToggle">
+                <i class="fa fa-bars"></i>
+            </button>
+            <form id="module" class="module">
+                <ul class="check-list">
+                    <li class="check-list_item">
+                        <input type="radio" name="direction" id="left" value="left">left
+                    </li>
+                    <li class="check-list_item">
+                        <input type="radio" name="direction" id="right" value="right">right
+                    </li>
+                    <li class="check-list_item">
+                        <input type="radio" name="direction" id="top" value="top">top
+                    </li>
+                    <li class="check-list_item">
+                        <input type="radio" name="direction" id="bottom" value="bottom">bottom
+                    </li>
                 </ul>
-            </nav>
+            </form>
         </div>
-    </header>
+        <nav class="main-nav offcanvas show-left" id="mainNav" data-direction="left">
+            <button class="nav-btn close-btn remove-btn" id="close-nav">
+                <i class="fa fa-times"></i>
+            </button>
+            <figure class="main-nav__logo">
+                <img alt="Brand" src="images/logo-header.png">
+            </figure>
+            <ul class="main-menu">
+                <li class="main-menu__item nav-item"><a href="#home">University Home</a></li>
+                <li class="main-menu__item nav-item"><a href="#about">About</a></li>
+                <li class="main-menu__item nav-item"><a href="#courses">Courses</a></li>
+                <li class="main-menu__item nav-item"><a href="#team">Team</a></li>
+                <li class="main-menu__item nav-item"><a href="#faq">FAQ</a></li>
+                <li class="main-menu__item nav-item"><a href="#partners">Partners</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 <section class="home">
     <div class="container">
         <div class="home-intro l-flex-center">
             <figure class="spd-logo">
-                <img class="img-responsive" src="images/spdu_logo.png" alt="logo">
+                <img class="img-responsive" data-src="images/spdu_logo.png" alt="logo">
             </figure>
             <h1 class="section-header title-home">Spd-University — <span class="title-home__child">IT-освіта Черкас</span></h1>
             <h2 class="registration uppercase main-block_primary-header">Реєстрацію закрито!</h2>
@@ -157,22 +163,22 @@
         </article>
         <div class="l-flex-around">
             <figure class="spd-logo">
-                <img class="img-responsive" src="images/about_logo.png" alt="logo">
+                <img class="img-responsive" data-src="images/about_logo.png" alt="logo">
             </figure>
             <div class="wrapper-about-courses">
                 <h4 class="about-title primary-color">На данний момент у нас відкриті такі курси:</h4>
                 <ul class="about-list">
                     <li class="about-list__item">
                         <!--<hr>-->
-                        <img src="images/java.png" class="about-block_courses-icon" alt="courses logo">
+                        <img data-src="images/java.png" class="about-block_courses-icon" alt="courses logo">
                         <a class="about-list__item_link" href="#">Java for Web</a></li>
                     <li class="about-list__item">
                         <!--<hr>-->
-                        <img src="images/html5.png" class="about-block_courses-icon" alt="courses logo">
+                        <img data-src="images/html5.png" class="about-block_courses-icon" alt="courses logo">
                         <a class="about-list__item_link" href="#">Front-End</a></li>
                     <li class="about-list__item">
                         <!--<hr>-->
-                        <img src="images/qa.png" class="about-block_courses-icon" alt="courses logo">
+                        <img data-src="images/qa.png" class="about-block_courses-icon" alt="courses logo">
                         <a class="about-list__item_link" href="#">Quality Assurance</a></li>
                 </ul>
             </div>
@@ -186,7 +192,7 @@
             <li class="courses-list__item">
                 <h3>Java <span>for</span> Web</h3>
                 <figure class="courses-logo">
-                    <img src="images/java.png" alt="courses-logo">
+                    <img data-src="images/java.png" alt="courses-logo">
                 </figure>
                 <p class="item-description">
                     Курс розрахований на тих, хто вже має теоретичну базу та зробив свої перші кроки у вивченні цієї
@@ -201,7 +207,7 @@
             <li class="courses-list__item">
                 <h3>Front-End</h3>
                 <figure class="courses-logo">
-                    <img src="images/html5.png" alt="courses-logo">
+                    <img data-src="images/html5.png" alt="courses-logo">
                 </figure>
                 <p class="item-description">Цей курс призначений для тих, хто хоче навчитися створювати сайти та
                     динамічні
@@ -216,7 +222,7 @@
             <li class="courses-list__item">
                 <h3>QA</h3>
                 <figure class="courses-logo">
-                    <img src="images/qa.png" alt="courses-logo">
+                    <img data-src="images/qa.png" alt="courses-logo">
                 </figure>
                 <p class="item-description">Курс призначений для слухачів без професійного досвіду в сфері
                     тестування програмного забезпечення</p>
@@ -314,200 +320,200 @@
     <h2 class="section-header header-primary primary-color">Команда SPD-University</h2>
     <ul class="team-list">
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/oleg_novitskiy.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/oleg_novitskiy.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Олег Новіцький</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/leonid_bayda.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/leonid_bayda.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Леонід Байда</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/maksym_melnyk.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/maksym_melnyk.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Максим Мельник</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/allteam.png" class="team-stuff-img img-responsive" alt="all team">
+            <figure class="team-img"><img data-src="images/team/allteam.png" class="team-stuff-img img-responsive" alt="all team">
             </figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Вся команда</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/alina_ternovaia.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/alina_ternovaia.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Олег Новіцький</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/Anakin.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/Anakin.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Леонід Байда</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/anastasia_sergienko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/anastasia_sergienko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Максим Мельник</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/anton_borisov.jpg" class="team-stuff-img img-responsive" alt="all team">
+            <figure class="team-img"><img data-src="images/team/anton_borisov.jpg" class="team-stuff-img img-responsive" alt="all team">
             </figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Вся команда</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/artem_tkachenko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/artem_tkachenko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Олег Новіцький</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/Borovyk.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/Borovyk.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Леонід Байда</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/daniel_synelnikov.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/daniel_synelnikov.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Максим Мельник</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/dmitry_nesterenko.jpg" class="team-stuff-img img-responsive" alt="all team">
+            <figure class="team-img"><img data-src="images/team/dmitry_nesterenko.jpg" class="team-stuff-img img-responsive" alt="all team">
             </figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Вся команда</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/elena_kiva.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/elena_kiva.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Олег Новіцький</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/elena_yaroslavskaya.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/elena_yaroslavskaya.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Леонід Байда</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/igor_shevchenko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/igor_shevchenko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Максим Мельник</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/ihor_dolych.jpg" class="team-stuff-img img-responsive" alt="all team">
+            <figure class="team-img"><img data-src="images/team/ihor_dolych.jpg" class="team-stuff-img img-responsive" alt="all team">
             </figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Вся команда</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/illia_moskaliuk.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/illia_moskaliuk.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Олег Новіцький</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/kate_nahorna.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/kate_nahorna.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Леонід Байда</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/Khakimulin.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/Khakimulin.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Максим Мельник</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/konstantin_kikot.jpg" class="team-stuff-img img-responsive" alt="all team">
+            <figure class="team-img"><img data-src="images/team/konstantin_kikot.jpg" class="team-stuff-img img-responsive" alt="all team">
             </figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Вся команда</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/Kosholap.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/Kosholap.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Олег Новіцький</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/Lazorenko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/Lazorenko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Леонід Байда</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/maksym_chepur.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/maksym_chepur.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Максим Мельник</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/miguel_suddya.jpg" class="team-stuff-img img-responsive" alt="all team">
+            <figure class="team-img"><img data-src="images/team/miguel_suddya.jpg" class="team-stuff-img img-responsive" alt="all team">
             </figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Вся команда</h3>
             </div>
         </li>
-         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/Nikitenko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+        <li class="team-list__item">
+            <figure class="team-img"><img data-src="images/team/Nikitenko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Олег Новіцький</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/sergey_bzenko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/sergey_bzenko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Леонід Байда</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/serhii_borovskyi.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/serhii_borovskyi.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Максим Мельник</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/Simonov.jpg" class="team-stuff-img img-responsive" alt="all team">
+            <figure class="team-img"><img data-src="images/team/Simonov.jpg" class="team-stuff-img img-responsive" alt="all team">
             </figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Вся команда</h3>
             </div>
         </li>
-         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/ulia_gotovtceva.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+        <li class="team-list__item">
+            <figure class="team-img"><img data-src="images/team/ulia_gotovtceva.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Олег Новіцький</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/Vasylchenko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/Vasylchenko.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Леонід Байда</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/viktoriya_karakat.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
+            <figure class="team-img"><img data-src="images/team/viktoriya_karakat.jpg" class="team-stuff-img img-responsive" alt="team member"></figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Максим Мельник</h3>
             </div>
         </li>
         <li class="team-list__item">
-            <figure class="team-img"><img src="images/team/vladislav_musienko.jpg" class="team-stuff-img img-responsive" alt="all team">
+            <figure class="team-img"><img data-src="images/team/vladislav_musienko.jpg" class="team-stuff-img img-responsive" alt="all team">
             </figure>
             <div class="team-shadow-overlay">
                 <h3 class="member-team">Вся команда</h3>
@@ -626,7 +632,7 @@
         <p class="sub-header">Ми вдячні нашим партнерам за підтримку <br>проекту SPD-University</p>
         <figure class="partner-logo">
             <a target="_blank" href="https://www.jetbrains.com" title="JetBrains official site">
-                <img src="images/jetbrains-variant-4.png" width="300" alt="JetBrains logo">
+                <img data-src="images/jetbrains-variant-4.png" width="300" alt="JetBrains logo">
             </a>
         </figure>
     </div>
@@ -636,7 +642,7 @@
     <div class="container">
         <div class="l-flex-between">
             <div class="footer-widget">
-                <a href="/" class="logo img-responsive"><img src="images/logo-footer.png" alt="logo"
+                <a href="/" class="logo img-responsive"><img data-src="images/logo-footer.png" alt="logo"
                                                              title="spd-university"></a>
                 <p class="promo">СПД-університет - найкращий спосіб прокачати свої знання у сфері ІТ</p>
             </div>
@@ -673,12 +679,12 @@
     </div>
 </footer>
 <button onclick="topFunction()" class="scroll-btn" id="scrollBtn"><i class="fa fa-angle-up"></i></button>
-    <!--</div>-->
+<!--</div>-->
 
 <!--<script src="js/vendor/jquery.min.js"></script>-->
 <!--<script src="js/vendor/bootstrap.min.js"></script>-->
 <script src="js/script.js"></script>
-<script defer>
+<script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
@@ -694,5 +700,26 @@
     ga('create', 'UA-82375944-1', 'auto');
     ga('send', 'pageview');
 </script>
+
+<script defer>
+    var startTime, endTime, fileSize;
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            endTime = (new Date()).getTime();
+            fileSize = xhr.responseText.length;
+            var speed = (fileSize * 8)/ ((endTime - startTime)/1000) / 1024;
+            console.log(speed + " Kbps\n");
+        }
+    }
+    startTime = (new Date()).getTime();
+
+    xhr.open("GET", "https://derhanov.github.io/images/team/anastasia_sergienko.jpg", true);
+    xhr.send();
+</script>
+
+<!--<script defer>-->
+  <!---->
+<!--</script>-->
 </body>
 </html>
